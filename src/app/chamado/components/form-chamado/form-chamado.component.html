@@ -1,0 +1,107 @@
+
+<div>
+    <h2 mat-dialog-title>Novo Chamado</h2>
+    <mat-spinner color="accent" mode="indeterminate" diameter="20" *ngIf="salvandoChamado"></mat-spinner>
+  
+    <mat-card-header>
+      <button id="menu" mat-icon-button (click)="sairDialog()">
+        <mat-icon>close</mat-icon>
+      </button>
+  </mat-card-header>
+  
+  </div>
+  <section mat-dialog-content>
+    <form action="" [formGroup]="formChamado" (ngSubmit)="salvar()">
+      <mat-form-field appearance="fill">
+        <mat-label>Numero do chamado</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: 123"
+          matInput
+          formControlName="idChamado"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Titulo</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: formatação"
+          matInput
+          formControlName="titulo"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: formatação de HD"
+          matInput
+          formControlName="descricao"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Data</mat-label>
+        <input
+          type="date"
+          placeholder="dd-MM-yyyy"
+          matInput
+          formControlName="dataEntrada"
+        >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Status</mat-label>
+          <mat-select  formControlName="status">
+            <mat-option value="RECEBIDO">Recebido</mat-option>
+            <mat-option value="ATRIBUIDO">Atribuido</mat-option>         
+            <mat-option value="CONCLUIDO">Concluido</mat-option>
+            <mat-option value="ARQUIVADO">Arquivado</mat-option>         
+          </mat-select>
+        </mat-form-field>
+        <label>----------------------------------------</label>
+        <mat-form-field appearance="fill">
+          <mat-label>Forma Pagamento</mat-label>
+          <input
+            type="text"
+            placeholder="Ex: PIX"
+            matInput
+            formControlName="formaPagamento"
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Valor</mat-label>
+          <input
+            type="text"
+            placeholder="Ex: R$100"
+            matInput
+            formControlName="valorPagamento"
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Pagamento</mat-label>
+          <mat-select   formControlName="statusPagamento">
+            <mat-option value="LANCADO">Lançado</mat-option>
+            <mat-option value="QUITADO">Quitado</mat-option>               
+          </mat-select>
+        </mat-form-field>
+        <label>----------------------------------------</label>
+        <mat-form-field appearance="fill">
+          <mat-label>Cliente</mat-label>
+          <mat-select   formControlName="idCliente" name="cliente">
+            <mat-option *ngFor="let cli of clientes" [value]="cli.idCliente">
+              {{cli.nome}}
+            </mat-option>         
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Funcionario</mat-label>
+          <mat-select formControlName="idFuncionarios" name="funcionario">
+            <mat-option *ngFor = "let func of funcionario" [value]="func.idFuncionario">
+              {{func.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+      <button type="submit"  mat-raised-button color="accent" id="salvar">Salvar</button>
+    </form>
+  </section>
+  

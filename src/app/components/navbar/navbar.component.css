@@ -1,0 +1,27 @@
+mat-toolbar-row {
+  display: flex;
+  align-items: center;
+}
+
+.separador {
+  flex-grow: 1;
+}
+
+.infos{
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tempo {
+  margin: 30px;
+}
+
+.email {
+  margin: 30px;
+  margin-top: 30px;
+}
+
+.icon {
+  margin-right: 10px;
+}

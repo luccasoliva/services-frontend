@@ -1,0 +1,46 @@
+<div>
+    <h2 mat-dialog-title>Novo Pagamento</h2>
+    <mat-spinner color="accent" mode="indeterminate" diameter="20" *ngIf="salvandoPagamento"></mat-spinner>
+  
+    <mat-card-header>
+      <button id="menu" mat-icon-button (click)="fecharDialog()">
+        <mat-icon>close</mat-icon>
+      </button>
+  </mat-card-header>
+  
+  </div>
+  <section mat-dialog-content>
+    <form action="" [formGroup]="formPagamento" (ngSubmit)="salvar()">
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Forma Pagamento</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: PIX"
+          matInput
+          formControlName="formaPagamento"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: LANCADO"
+          matInput
+          formControlName="status"
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Valor</mat-label>
+        <input
+          type="text"
+          placeholder="Ex: R$100"
+          matInput
+          formControlName="valor"
+        >
+      </mat-form-field>
+  
+      <button type="submit" [disabled]="formPagamento.invalid" mat-raised-button color="accent" id="salvar">Salvar</button>
+    </form>
+  </section>
+  

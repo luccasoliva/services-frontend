@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>Services</h1>
+    <div class="infos">
+
+      <span class="tempo"><mat-icon class="icon">alarm</mat-icon>{{ tempoToken() | data }}</span>
+
+      <span class="email"><mat-icon class="icon">perm_identity</mat-icon>{{getEmailToken()}}</span>
+    </div>
+    <span class="separador"></span>
+    <button mat-button [matMenuTriggerFor]="menuFuncionarios">Menu</button>
+    <mat-menu #menuFuncionarios="matMenu">
+      <label
+        mat-menu-item
+        (click)="chamarFuncionario()"
+      >Funcionarios</label>
+      <label
+      mat-menu-item
+      (click)="chamarCargos()"
+    >Cargos</label>
+    <label
+      mat-menu-item
+      (click)="chamarClientes()"
+    >Clientes</label>
+    <label
+    mat-menu-item
+    (click)=" chamarPagamento()"
+  >Pagamentos</label>
+  <label
+  mat-menu-item
+  (click)=" chamarChamados()"
+>Chamados</label>
+    </mat-menu>
+
+    <button mat-icon-button (click)="authService.signOut()" matTooltip="Sign out">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
