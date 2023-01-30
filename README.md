@@ -3,7 +3,7 @@
 Para testar o Porjeto npm install dentro da aplicação front end
 <br>
 Link backend: https://github.com/luccasoliva/services-backend <br>
-Run no arquivo docker-compose.yml para iniciar o banco de dados MySQL e o Redis
+Run no arquivo docker-compose.yml para iniciar o MySQL e Redis
 <br>
 
 Credenciais para teste: Email = teste@gmail.com | Password: teste
