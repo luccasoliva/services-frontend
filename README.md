@@ -1,27 +1,18 @@
 # ServicesFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Para testar o Porjeto npm install dentro da aplicação front end
+Run no arquivo docker-compose.yml para iniciar o banco de dados MySQL e o Redis
 
-## Development server
+Credenciais para teste: Email = teste@gmail.com | Password: teste
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Projeto onde é possível criar funcionários, clientes, registrar chamados e pagamentos.
 
-## Code scaffolding
+Frontend: Angular, Typescript, Material e Firebase(salvar fotos)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Backend: Java, Spring Boot, Docker, MySQL e Redis.
 
-## Build
+Fotos de exemplo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![create](https://user-images.githubusercontent.com/58635996/215585039-935d40a6-0a72-4208-9f49-6bdc0251c6b4.png)
+![1login-page](https://user-images.githubusercontent.com/58635996/215585040-ac1c85b1-bae9-4508-95e9-88318c54cde8.png)
+![11page](https://user-images.githubusercontent.com/58635996/215585041-4b36339f-c4f1-4848-8190-aae10fc13301.png)
